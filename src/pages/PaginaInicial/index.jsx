@@ -1,6 +1,6 @@
 import { LayoutComponents } from "../../components/LayoutComponents";
 import {Link} from 'react-router-dom';
-import carro from '../../assets/carro.png';
+import tickets from '../../assets/tickets.png';
 
 export const PaginaInicial = () => {
 
@@ -16,7 +16,7 @@ export const PaginaInicial = () => {
                                          
                     </div>
 
-                    <span><img src={carro} alt="Carro do Vem de Carona" width='400px'/></span>
+                    <span><img src={tickets} alt="tickets" width='400px'/></span>
                 </section>
 
                 <section className="conteudo-secundario">

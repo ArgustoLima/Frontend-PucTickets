@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;  
-    background: linear-gradient(68deg, #157a8c 16.62%, #b3aca4 85.61%);
+    background: linear-gradient(68deg, #a8223b 16.62%, #a44e5e 85.61%);
     background-attachment: fixed; 
     font-family: Nunito, sans-serif;
 }
@@ -57,14 +57,14 @@
 
 
 .conteudo-principal-escrito-titulo {
-    font-family: 'Righteous', cursive;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     font-size: 64px;
     color:#ECD6C4;
 }
 
 .conteudo-principal-escrito-subtitulo {
-    font-family: 'Sarala', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: #FFF2E7;

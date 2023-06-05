@@ -1,9 +1,9 @@
 
+import { LayoutComponents } from '../../components/LayoutComponents';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { LayoutComponents } from '../../components/LayoutComponents';
 
-export const Login = () => {
+export const CadastroTicket = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   return (

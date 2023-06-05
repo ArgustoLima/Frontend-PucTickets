@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { PaginaInicial } from '../pages/PaginaInicial';
-import { Login } from '../pages/Login';
+import { CadastroTicket } from '../pages/CadastroTicket';
 import { Cadastro } from '../pages/Cadastro';
 
 
@@ -10,9 +10,8 @@ export const AppRouter = () =>{
         <Router>
             <Routes>
                 <Route path="/" exact element={<PaginaInicial />} />
-                <Route path="/login" exact element={<Login />} />
-                <Route path="/cadastro" exact element={<Cadastro />} />
-                     
+                <Route path="/cadastroTicket" exact element={<CadastroTicket />} />
+                <Route path="/cadastro" exact element={<Cadastro />} />      
             </Routes>
         </Router>
     );
