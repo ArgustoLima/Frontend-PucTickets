@@ -9,10 +9,10 @@ export const PaginaInicial = () => {
             <div className="container">
                 <section className="conteudo-principal">
                     <div className="conteudo-principal-escrito">
-                        <h1 className="conteudo-principal-escrito-titulo">Vem de Carona</h1>
-                        <h2 className="conteudo-principal-escrito-subtitulo">Venha pegar carona com colegas universitários</h2>
+                        <h1 className="conteudo-principal-escrito-titulo">CLANDESTICKET</h1>
+                        <h2 className="conteudo-principal-escrito-subtitulo">Venha vender ou comprar os ingressos do momento</h2>
                         
-                            <Link to="/login"className="conteudo-principal-escrito-botao">Login</Link>
+                            <Link to="/cadastro"className="conteudo-principal-escrito-botao">Login</Link>
                                          
                     </div>
 
@@ -21,9 +21,8 @@ export const PaginaInicial = () => {
 
                 <section className="conteudo-secundario">
                     <h3 className="conteudo-secundario-titulo">Como trabalhamos</h3>
-                    <p className="conteudo-secundario-paragrafo">Site em que estudantes universitários poderão oferecer e/ou receber caronas de outros estudantes para ir até a universidade.</p>
-                    <p className="conteudo-secundario-paragrafo">Cadastre-se para conseguir receber caronas</p>
-                    <p className="conteudo-secundario-paragrafo">Após se cadastrar, registre seu carro para oferecer caronas</p>
+                    <p className="conteudo-secundario-paragrafo">Site em que você "PODE" vender seus ingressos de shows o qual não poderá ir!</p>
+                    <p className="conteudo-secundario-paragrafo">Perdeu a compra? aqui você pode comprar ingressos dos eventos do momento.</p>
                 </section>
 
                 <footer className="rodape">

@@ -4,41 +4,120 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export const CadastroTicket = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [evento, setEvento] = useState("")
+  const [descricao, setDescricao] = useState("")
+  const [empresa, setEmpresa] = useState("")
+  const [logradouro, setLogradouro] = useState("")
+  const [complemento, setComplemento] = useState("")
+  const [numero, setNumero] = useState("")
+  const [cidade, setCidade] = useState("")
+  const [bairro, setBairro] = useState("")
+  const [uf, setUf] = useState("")
+  const [cep, setCep] = useState("")
   return (
     <LayoutComponents>
       <form className="conteudo-principal-escrito">
 
-        <span className="conteudo-principal-escrito-titulo flex"> Bem Vindo!</span>
-        <span className="conteudo-principal-escrito-subtitulo flex"> Faça seu Login:</span>
+        <span className="conteudo-principal-escrito-subtitulo flex"> Insira as informações para cadastrar o ticket:</span>
 
         <div className="flex">
           <input 
-            placeholder="E-mail"
-            className={email !== "" ? 'has-val input' : 'input'}
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}/>
+            placeholder="Nome evento"
+            className={evento !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={evento}
+            onChange={e => setEvento(e.target.value)}/>
         </div>
 
         <div className="flex">
-          <input
-            placeholder="Senha"
-            className={password !== "" ? 'has-val input' : 'input'}
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}/>
+          <input 
+            placeholder="Descrição"
+            className={descricao !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={descricao}
+            onChange={e => setDescricao(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Empresa"
+            className={empresa !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={empresa}
+            onChange={e => setEmpresa(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Logradouro"
+            className={logradouro !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={logradouro}
+            onChange={e => setLogradouro(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Complemento"
+            className={complemento !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={complemento}
+            onChange={e => setComplemento(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Número"
+            className={numero !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={numero}
+            onChange={e => setNumero(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Cidade"
+            className={cidade !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={cidade}
+            onChange={e => setCidade(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="Bairro"
+            className={bairro !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={bairro}
+            onChange={e => setBairro(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="UF"
+            className={uf !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={uf}
+            onChange={e => setUf(e.target.value)}/>
+        </div>
+
+        <div className="flex">
+          <input 
+            placeholder="CEP"
+            className={cep !== "" ? 'has-val input' : 'input'}
+            type="text"
+            value={cep}
+            onChange={e => setCep(e.target.value)}/>
         </div>
 
         <div className="flex">
           <form action="/tela_usuario">
-            <input className='login-form-btn' type="submit" value="Entrar"/>
+            <input className='login-form-btn' type="submit" value="Cadastrar"/>
           </form>
         </div>
 
         <div className="flex">
-          <span className="criar-conta">Não possui conta? </span>
+          <span className="criar-conta">Já possui conta?</span>
           <Link className="criar-conta-cadastro" to='/cadastro'> Criar conta.</Link>
         </div>
 
