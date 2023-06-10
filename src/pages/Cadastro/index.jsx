@@ -92,13 +92,38 @@ export const Cadastro = () => {
                         onChange={e => setPasswordNovamente(e.target.value)}
                     />
                     <span className="focus-input" data-></span>
-                </div>            
-                
-                <div className="flex">  
-                    <form action="/login">
-                        <input className='login-form-btn' type="submit" value="Cadastrar"/>
+                </div>                 
+
+                <div className="flex">
+                    <form>
+                        <input className='login-form-btn' type="submit" value="Cadastrar"
+                        onClick = {
+                            async e => {
+                                e.preventDefault();
+                                const resp = await fetch("/signUp/user", {
+                                    method: "POST",
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({                                   
+                                        name: nome,
+                                        surname: sobrenome,
+                                        cpf: cpf,
+                                        email: email,
+                                        password: password,
+                                        passworddnv: passworddnv,
+                                        celular: celular,
+                                        endereco: endereco
+                                    })
+                                });
+                                console.log(resp.status);
+                                if (resp.status === 201){
+                                    window.location.href = '/';
+                                }
+                        }}/>
                     </form>
-                </div>               
+                </div>        
 
                 <div className='flex'>
                     <span className='criar-conta'>Já possui conta? </span>

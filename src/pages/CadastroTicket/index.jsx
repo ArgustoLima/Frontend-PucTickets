@@ -111,10 +111,37 @@ export const CadastroTicket = () => {
         </div>
 
         <div className="flex">
-          <form action="/tela_usuario">
-            <input className='login-form-btn' type="submit" value="Cadastrar"/>
-          </form>
-        </div>
+                    <form>
+                        <input className='login-form-btn' type="submit" value="Cadastrar"
+                        onClick = {
+                            async e => {
+                                e.preventDefault();
+                                const resp = await fetch("/signUp/user", {
+                                    method: "POST",
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({                                   
+                                        evento: evento,
+                                        descricao: descricao,
+                                        empresa: empresa,
+                                        logradouro: logradouro,
+                                        complemento: complemento,
+                                        numero: numero,
+                                        cidade: cidade,
+                                        bairro: bairro,
+                                        uf: uf,
+                                        cep: cep
+                                    })
+                                });
+                                console.log(resp.status);
+                                if (resp.status === 201){
+                                    window.location.href = '/';
+                                }
+                        }}/>
+                    </form>
+                </div>  
 
         <div className="flex">
           <span className="criar-conta">Já possui conta?</span>
