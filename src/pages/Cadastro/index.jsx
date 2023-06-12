@@ -100,7 +100,7 @@ export const Cadastro = () => {
                         onClick = {
                             async e => {
                                 e.preventDefault();
-                                const resp = await fetch("/signUp/user", {
+                                const resp = await fetch("https://localhost:7184/api/tickets/AdicionarUsuario", {
                                     method: "POST",
                                     headers: {
                                         'Accept': 'application/json',

@@ -116,7 +116,7 @@ export const CadastroTicket = () => {
                         onClick = {
                             async e => {
                                 e.preventDefault();
-                                const resp = await fetch("/signUp/user", {
+                                const resp = await fetch("https://localhost:7184/api/tickets/AdicionarIngresso", {
                                     method: "POST",
                                     headers: {
                                         'Accept': 'application/json',
